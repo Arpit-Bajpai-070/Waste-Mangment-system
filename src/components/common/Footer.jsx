@@ -14,7 +14,7 @@ const Footer = () => {
             </div>
             <div>
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">24/7 Civic Cleanup Helpline</p>
-              <p className="text-base font-bold text-slate-900">1800-CLEAN-CITY (1800-253-2624)</p>
+              <p className="text-base font-bold text-slate-900">1800-VACCUM (1800-253-2624)</p>
             </div>
           </div>
           <div className="flex items-center gap-4 text-xs font-medium text-emerald-800">
@@ -38,11 +38,11 @@ const Footer = () => {
                 <Recycle className="h-6 w-6 stroke-[2.2]" />
               </div>
               <span className="text-xl font-extrabold tracking-tight text-slate-900">
-                CLEAN<span className="text-[#16A34A]">CITY</span>
+                VACCUM
               </span>
             </div>
             <p className="text-xs leading-relaxed text-slate-500 max-w-sm">
-              CleanCity is an integrated civic-technology platform empowering residents and municipal authorities to maintain cleaner streets, optimize waste routing, and drive circular waste recovery.
+              Vaccum is an integrated civic-technology platform empowering residents and municipal authorities to maintain cleaner streets, optimize waste routing, and drive circular waste recovery.
             </p>
             <div className="flex items-center gap-3 text-xs text-slate-500 pt-1">
               <span className="flex items-center gap-1 text-emerald-700 font-semibold">
@@ -113,7 +113,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-slate-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} CleanCity Municipal Waste Management. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vaccum Municipal Waste Management. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-slate-600 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-600 transition-colors">Terms of Civic Service</a>

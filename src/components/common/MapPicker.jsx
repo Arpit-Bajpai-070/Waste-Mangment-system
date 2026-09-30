@@ -104,7 +104,7 @@ const MapPicker = ({ selectedLocation, onSelectLocation, initialCoords }) => {
 
         {/* Civic Grid Labels */}
         <div className="absolute top-3 left-3 rounded-md bg-white/90 px-2 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur-xs border border-slate-200/80 shadow-2xs pointer-events-none">
-          Sector 4 • CleanCity Municipal Grid
+          Sector 4 • Vaccum Municipal Grid
         </div>
 
         <div className="absolute bottom-3 right-3 rounded-md bg-slate-900/80 px-2.5 py-1 text-[11px] font-mono text-emerald-300 backdrop-blur-xs shadow-xs pointer-events-none">

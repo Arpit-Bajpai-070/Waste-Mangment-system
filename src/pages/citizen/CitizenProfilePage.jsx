@@ -24,7 +24,7 @@ const CitizenProfilePage = () => {
           </div>
           <div>
             <h3 className="text-lg font-bold text-slate-900">{user?.name || 'Aarav Mehta'}</h3>
-            <p className="text-xs text-slate-500">{user?.email || 'citizen@cleancity.org'}</p>
+            <p className="text-xs text-slate-500">{user?.email || 'citizen@vaccum.org'}</p>
             <div className="mt-1.5 flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full w-fit">
               <ShieldCheck className="h-3.5 w-3.5" />
               Verified Resident Guardian
@@ -40,7 +40,7 @@ const CitizenProfilePage = () => {
 
           <div className="rounded-xl bg-slate-50 p-3.5 border border-slate-100 space-y-1">
             <span className="text-slate-400 font-bold uppercase text-[10px]">Municipal City</span>
-            <div className="text-slate-800 font-semibold">{user?.city || 'Metro CleanCity'}</div>
+            <div className="text-slate-800 font-semibold">{user?.city || 'Metro Vaccum'}</div>
           </div>
 
           <div className="sm:col-span-2 rounded-xl bg-slate-50 p-3.5 border border-slate-100 space-y-1">

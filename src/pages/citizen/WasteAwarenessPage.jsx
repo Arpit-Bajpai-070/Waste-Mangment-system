@@ -259,7 +259,7 @@ const WasteAwarenessPage = () => {
                 <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-slate-900 font-semibold">Schedule Bulk Cleanup for Renovations</strong>
-                  Never dump concrete, tiles, or furniture on street curbs; use our CleanCity request form.
+                  Never dump concrete, tiles, or furniture on street curbs; use our Vaccum request form.
                 </div>
               </li>
             </ul>

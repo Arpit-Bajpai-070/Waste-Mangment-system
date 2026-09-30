@@ -1,6 +1,6 @@
-# CleanCity – Smart Waste Management System
+# Vaccum – Smart Waste Management System
 
-A modern, responsive, and professional frontend for **CleanCity**, an enterprise-grade civic-technology platform empowering citizens and municipal sanitation authorities to collaborate on cleaner, healthier urban environments.
+A modern, responsive, and professional frontend for **Vaccum**, an enterprise-grade civic-technology platform empowering citizens and municipal sanitation authorities to collaborate on cleaner, healthier urban environments.
 
 ---
 
@@ -11,7 +11,7 @@ A modern, responsive, and professional frontend for **CleanCity**, an enterprise
   - Clean green city skyline with solar-paneled towers.
   - Swaying lush trees and drifting clouds.
   - Floating eco leaves and ambient particles.
-  - An animated **CleanCity Electric Sanitation Truck** with rotating wheels and zero-emission branding smoothly traversing a clean road.
+  - An animated **Vaccum Electric Sanitation Truck** with rotating wheels and zero-emission branding smoothly traversing a clean road.
   - Moving quote: *“Together, we can build cleaner and healthier communities.”*
 - **1-Click Quick Demo Login**: Toggle between citizen (`Aarav Mehta`) and admin (`Director Sarah Vance`) credentials with a single click.
 

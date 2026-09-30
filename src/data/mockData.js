@@ -1,4 +1,4 @@
-// Mock database and seed data for CleanCity Smart Waste Management System
+// Mock database and seed data for Vaccum Smart Waste Management System
 
 export const INITIAL_WORKERS = [
   { id: 'W-101', name: 'Rajesh Sharma', role: 'Senior Sanitation Lead', team: 'Eco-Squad Unit 4B', phone: '+1 (555) 234-8901', rating: 4.9, activeTasks: 2 },
@@ -59,7 +59,7 @@ export const INITIAL_REQUESTS = [
     expectedCompletion: '2026-10-03 04:30 PM',
     imageUrl: 'https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?auto=format&fit=crop&w=800&q=80',
     timeline: [
-      { step: 'Submitted', time: '2026-09-29 02:20 PM', note: 'Request filed via CleanCity Portal.' },
+      { step: 'Submitted', time: '2026-09-29 02:20 PM', note: 'Request filed via Vaccum Portal.' },
       { step: 'Under Review', time: '2026-09-29 03:00 PM', note: 'Heavy waste permits validated.' },
       { step: 'Assigned', time: '2026-09-29 04:10 PM', note: 'Dispatched to Heavy Waste Operator Marcus Vance.' }
     ]
@@ -332,7 +332,7 @@ export const WASTE_CATEGORIES = [
     iconName: 'Cpu',
     description: 'Discarded electrical or electronic equipment containing valuable precious metals as well as heavy metals.',
     examples: ['Old smartphones & tablets', 'Broken laptops & monitors', 'Cables, chargers & adapters', 'Household appliances', 'Circuit boards & RAM'],
-    instructions: 'Hand over to authorized e-waste dismantling facilities through CleanCity scheduled e-waste collection drives.',
+    instructions: 'Hand over to authorized e-waste dismantling facilities through Vaccum scheduled e-waste collection drives.',
     doList: ['Wipe personal digital data before disposal', 'Remove detachable batteries safely', 'Keep appliances intact to avoid lead leakage'],
     dontList: ['Never throw electronic devices into general trash', 'Never break open CRT displays or batteries', 'Do not dismantle components without protection']
   }

@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           <div>
             <span className="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1">
-              CLEAN<span className="text-[#16A34A]">CITY</span>
+              VACCUM
             </span>
             <span className="block text-[10px] font-semibold uppercase tracking-widest text-slate-400">
               Smart Waste System

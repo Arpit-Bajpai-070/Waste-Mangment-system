@@ -167,8 +167,8 @@ const EnvironmentalScene = () => {
                 <path d="M 68 18 L 84 18 L 94 30 L 94 42 L 68 42 Z" fill="#0F172A" />
                 {/* Cabin Windshield */}
                 <polygon points="72,21 82,21 90,30 72,30" fill="#93C5FD" />
-                {/* CleanCity Badge */}
-                <text x="12" y="38" fill="#FFFFFF" fontSize="7" fontWeight="bold" fontFamily="sans-serif">CLEANCITY</text>
+                {/* Vaccum Badge */}
+                <text x="12" y="38" fill="#FFFFFF" fontSize="7" fontWeight="bold" fontFamily="sans-serif">VACCUM</text>
                 {/* Bumper & Headlights */}
                 <rect x="94" y="34" width="4" height="6" rx="1" fill="#FDE047" />
                 <rect x="2" y="34" width="4" height="6" rx="1" fill="#EF4444" />
@@ -194,7 +194,7 @@ const EnvironmentalScene = () => {
           “Together, we can build cleaner and healthier communities.”
         </p>
         <p className="mt-1 text-xs text-slate-500">
-          CleanCity Municipal Waste Intelligence • Serving 1.2M+ Citizens
+          Vaccum Municipal Waste Intelligence • Serving 1.2M+ Citizens
         </p>
 
         {/* Mini stats row */}

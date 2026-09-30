@@ -6,7 +6,7 @@ const AppContext = createContext(null);
 export const AppProvider = ({ children }) => {
   // Current user state
   const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem('cleancity_user');
+    const saved = localStorage.getItem('vaccum_user');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* ignore */ }
     }
@@ -16,13 +16,13 @@ export const AppProvider = ({ children }) => {
       phone: '+1 (555) 890-1234',
       role: 'citizen', // 'citizen' or 'admin'
       area: 'Greenwood Avenue, Sector 4',
-      city: 'Metro CleanCity'
+      city: 'Metro Vaccum'
     };
   });
 
   // Requests state with localStorage sync
   const [requests, setRequests] = useState(() => {
-    const saved = localStorage.getItem('cleancity_requests');
+    const saved = localStorage.getItem('vaccum_requests');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* ignore */ }
     }
@@ -31,7 +31,7 @@ export const AppProvider = ({ children }) => {
 
   // Issues state with localStorage sync
   const [issues, setIssues] = useState(() => {
-    const saved = localStorage.getItem('cleancity_issues');
+    const saved = localStorage.getItem('vaccum_issues');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* ignore */ }
     }
@@ -43,15 +43,15 @@ export const AppProvider = ({ children }) => {
 
   // Save to localStorage
   useEffect(() => {
-    localStorage.setItem('cleancity_user', JSON.stringify(user));
+    localStorage.setItem('vaccum_user', JSON.stringify(user));
   }, [user]);
 
   useEffect(() => {
-    localStorage.setItem('cleancity_requests', JSON.stringify(requests));
+    localStorage.setItem('vaccum_requests', JSON.stringify(requests));
   }, [requests]);
 
   useEffect(() => {
-    localStorage.setItem('cleancity_issues', JSON.stringify(issues));
+    localStorage.setItem('vaccum_issues', JSON.stringify(issues));
   }, [issues]);
 
   // Toast notification system
@@ -73,11 +73,11 @@ export const AppProvider = ({ children }) => {
     if (role === 'admin' || email.toLowerCase().includes('admin')) {
       loggedUser = {
         name: 'Director Sarah Vance',
-        email: email || 'admin@cleancity.gov',
+        email: email || 'admin@vaccum.gov',
         phone: '+1 (555) 000-8899',
         role: 'admin',
         area: 'Municipal Central HQ',
-        city: 'Metro CleanCity'
+        city: 'Metro Vaccum'
       };
     } else {
       loggedUser = {
@@ -86,11 +86,11 @@ export const AppProvider = ({ children }) => {
         phone: '+1 (555) 890-1234',
         role: 'citizen',
         area: 'Greenwood Avenue, Sector 4',
-        city: 'Metro CleanCity'
+        city: 'Metro Vaccum'
       };
     }
     setUser(loggedUser);
-    addToast('Welcome to CleanCity', `Signed in as ${loggedUser.name} (${loggedUser.role === 'admin' ? 'Administrator' : 'Citizen'})`, 'success');
+    addToast('Welcome to Vaccum', `Signed in as ${loggedUser.name} (${loggedUser.role === 'admin' ? 'Administrator' : 'Citizen'})`, 'success');
     return loggedUser;
   };
 
@@ -101,7 +101,7 @@ export const AppProvider = ({ children }) => {
       phone: userData.phone || '+1 (555) 123-4567',
       role: 'citizen',
       area: userData.area || 'Greenwood Avenue, Sector 4',
-      city: userData.city || 'Metro CleanCity'
+      city: userData.city || 'Metro Vaccum'
     };
     setUser(newUser);
     addToast('Registration Complete', 'Your citizen account has been successfully created!', 'success');
@@ -110,18 +110,18 @@ export const AppProvider = ({ children }) => {
 
   const logout = () => {
     setUser(null);
-    addToast('Signed Out', 'You have been safely logged out of CleanCity.', 'info');
+    addToast('Signed Out', 'You have been safely logged out of Vaccum.', 'info');
   };
 
   const switchRole = (newRole) => {
     if (newRole === 'admin') {
       setUser({
         name: 'Director Sarah Vance',
-        email: 'admin@cleancity.gov',
+        email: 'admin@vaccum.gov',
         phone: '+1 (555) 000-8899',
         role: 'admin',
         area: 'Municipal Central HQ',
-        city: 'Metro CleanCity'
+        city: 'Metro Vaccum'
       });
       addToast('Role Switched', 'You are now viewing as Municipal Administrator.', 'info');
     } else {
@@ -131,7 +131,7 @@ export const AppProvider = ({ children }) => {
         phone: '+1 (555) 890-1234',
         role: 'citizen',
         area: 'Greenwood Avenue, Sector 4',
-        city: 'Metro CleanCity'
+        city: 'Metro Vaccum'
       });
       addToast('Role Switched', 'You are now viewing as Citizen.', 'info');
     }
@@ -148,7 +148,7 @@ export const AppProvider = ({ children }) => {
       id: newId,
       title: data.title || 'Waste Cleanup Request',
       citizenName: user?.name || 'Aarav Mehta',
-      citizenEmail: user?.email || 'citizen@cleancity.org',
+      citizenEmail: user?.email || 'citizen@vaccum.org',
       citizenPhone: data.contactNumber || user?.phone || '+1 (555) 000-0000',
       location: data.location || 'Greenwood Avenue, Sector 4',
       address: data.address || 'Street 1, Main Road',
@@ -293,9 +293,9 @@ export const AppProvider = ({ children }) => {
   const resetDemoData = () => {
     setRequests(INITIAL_REQUESTS);
     setIssues(INITIAL_ISSUES);
-    localStorage.removeItem('cleancity_requests');
-    localStorage.removeItem('cleancity_issues');
-    addToast('Demo Reset', 'Default CleanCity demonstration data restored.', 'info');
+    localStorage.removeItem('vaccum_requests');
+    localStorage.removeItem('vaccum_issues');
+    addToast('Demo Reset', 'Default Vaccum demonstration data restored.', 'info');
   };
 
   // Computed metrics
