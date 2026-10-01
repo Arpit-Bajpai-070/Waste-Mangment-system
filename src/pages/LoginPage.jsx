@@ -44,7 +44,7 @@ const LoginPage = () => {
   };
 
   const handleQuickAdmin = () => {
-    setEmail('admin@vaccum.gov');
+    setEmail('admin@vacuum.gov');
     setPassword('civicAdmin2026');
     setError('');
   };
@@ -62,7 +62,7 @@ const LoginPage = () => {
               </div>
               <div>
                 <span className="text-xl font-extrabold tracking-tight text-slate-900">
-                  VACCUM
+                  VACUUM
                 </span>
                 <span className="block text-[10px] font-semibold uppercase tracking-widest text-slate-400">
                   Smart Waste System
@@ -191,7 +191,7 @@ const LoginPage = () => {
               icon={ArrowRight}
               iconPosition="right"
             >
-              Sign In to Vaccum
+              Sign In to Vacuum
             </Button>
           </form>
 

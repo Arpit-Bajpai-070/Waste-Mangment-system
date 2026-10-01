@@ -28,7 +28,7 @@ const RegisterPage = () => {
     password: '',
     confirmPassword: '',
     area: CITY_AREAS[0],
-    city: 'Metro Vaccum',
+    city: 'Metro Vacuum',
     agreeTerms: true
   });
 
@@ -80,7 +80,7 @@ const RegisterPage = () => {
                 <Recycle className="h-5 w-5 stroke-[2.2]" />
               </div>
               <span className="text-xl font-extrabold tracking-tight text-slate-900">
-                VACCUM
+                VACUUM
               </span>
             </Link>
 
@@ -176,7 +176,7 @@ const RegisterPage = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    placeholder="Metro Vaccum"
+                    placeholder="Metro Vacuum"
                     className="block w-full rounded-xl border border-slate-200 bg-slate-50/50 py-2 pl-9 pr-3 text-sm text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500/20"
                   />
                 </div>

@@ -70,7 +70,7 @@ const AdminAnalyticsPage = () => {
   const maxMonthlyVal = 1600;
 
   const handleExportReport = () => {
-    addToast('Report Exported', 'Vaccum Municipal Monthly Analytics Report (PDF/CSV) generated.', 'success');
+    addToast('Report Exported', 'Vacuum Municipal Monthly Analytics Report (PDF/CSV) generated.', 'success');
   };
 
   return (
@@ -240,7 +240,7 @@ const AdminAnalyticsPage = () => {
           </div>
 
           <div className="rounded-xl bg-slate-50 p-3 text-xs text-slate-600 border border-slate-100">
-            <strong>Vaccum Standard:</strong> All pending requests must be reviewed within 2 hours of citizen filing.
+            <strong>Vacuum Standard:</strong> All pending requests must be reviewed within 2 hours of citizen filing.
           </div>
         </div>
       </div>

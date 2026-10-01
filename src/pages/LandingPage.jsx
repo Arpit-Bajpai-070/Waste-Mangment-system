@@ -146,7 +146,7 @@ const LandingPage = () => {
 
                     <div className="relative z-10 flex items-center justify-between">
                       <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold backdrop-blur-md">
-                        Vaccum Live Grid
+                        Vacuum Live Grid
                       </span>
                       <span className="flex items-center gap-1 text-xs font-medium text-emerald-100">
                         <span className="h-2 w-2 rounded-full bg-emerald-300 animate-ping" />
@@ -249,7 +249,7 @@ const LandingPage = () => {
               Streamlined Process
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              How Vaccum Works
+              How Vacuum Works
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
               A transparent, 5-step civic technology workflow designed to resolve waste issues swiftly.

@@ -21,7 +21,7 @@ const AdminAuthModal = ({ isOpen, onClose, onSuccess, redirectOnCancel = false }
   const { login, addToast } = useApp();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('admin@vaccum.gov');
+  const [email, setEmail] = useState('admin@vacuum.gov');
   const [password, setPassword] = useState('civicAdmin2026');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -30,7 +30,7 @@ const AdminAuthModal = ({ isOpen, onClose, onSuccess, redirectOnCancel = false }
   if (!isOpen) return null;
 
   const handleAutofill = () => {
-    setEmail('admin@vaccum.gov');
+    setEmail('admin@vacuum.gov');
     setPassword('civicAdmin2026');
     setError('');
   };
@@ -41,11 +41,11 @@ const AdminAuthModal = ({ isOpen, onClose, onSuccess, redirectOnCancel = false }
 
     // Verification check
     const isValidAdmin =
-      email.trim().toLowerCase() === 'admin@vaccum.gov' ||
+      email.trim().toLowerCase() === 'admin@vacuum.gov' ||
       email.trim().toLowerCase().includes('admin');
 
     if (!isValidAdmin) {
-      setError('Access Denied. Only authorized @vaccum.gov administrator accounts are permitted.');
+      setError('Access Denied. Only authorized @vacuum.gov administrator accounts are permitted.');
       return;
     }
 
@@ -155,7 +155,7 @@ const AdminAuthModal = ({ isOpen, onClose, onSuccess, redirectOnCancel = false }
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@vaccum.gov"
+                placeholder="admin@vacuum.gov"
                 className="block w-full rounded-xl border border-slate-200 bg-slate-50/60 py-2.5 pl-9 pr-3 text-xs text-slate-900 focus:border-emerald-500 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500/20"
               />
             </div>
