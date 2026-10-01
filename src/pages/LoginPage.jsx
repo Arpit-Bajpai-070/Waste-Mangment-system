@@ -1,52 +1,61 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useApp } from '../context/AppContext';
-import { Recycle, Mail, Lock, Eye, EyeOff, ArrowRight, Shield, User, CheckCircle2 } from 'lucide-react';
-import Button from '../components/common/Button';
-import EnvironmentalScene from '../components/common/EnvironmentalScene';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useApp } from "../context/AppContext";
+import {
+  Recycle,
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  Shield,
+  User,
+} from "lucide-react";
+import Button from "../components/common/Button";
+import EnvironmentalScene from "../components/common/EnvironmentalScene";
 
 const LoginPage = () => {
   const { login } = useApp();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('aarav.mehta@citymail.org');
-  const [password, setPassword] = useState('••••••••••');
+  const [email, setEmail] = useState("aarav.mehta@citymail.org");
+  const [password, setPassword] = useState("••••••••••");
   const [rememberMe, setRememberMe] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email) {
-      setError('Please enter your email address.');
+      setError("Please enter your email address.");
       return;
     }
-    setError('');
+    setError("");
     setLoading(true);
 
     setTimeout(() => {
       setLoading(false);
-      const isOfficer = email.toLowerCase().includes('admin');
-      const loggedIn = login(email, password, isOfficer ? 'admin' : 'citizen');
-      if (loggedIn.role === 'admin') {
-        navigate('/admin');
+      const isOfficer = email.toLowerCase().includes("admin");
+      const loggedIn = login(email, password, isOfficer ? "admin" : "citizen");
+      if (loggedIn.role === "admin") {
+        navigate("/admin");
       } else {
-        navigate('/dashboard');
+        navigate("/dashboard");
       }
     }, 600);
   };
 
   const handleQuickCitizen = () => {
-    setEmail('aarav.mehta@citymail.org');
-    setPassword('resident123');
-    setError('');
+    setEmail("aarav.mehta@citymail.org");
+    setPassword("resident123");
+    setError("");
   };
 
   const handleQuickAdmin = () => {
-    setEmail('admin@vacuum.gov');
-    setPassword('civicAdmin2026');
-    setError('');
+    setEmail("admin@vacuum.gov");
+    setPassword("civicAdmin2026");
+    setError("");
   };
 
   return (
@@ -56,8 +65,10 @@ const LoginPage = () => {
         <div className="w-full max-w-md space-y-8">
           {/* Logo & Welcome */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-2.5 mb-6 group">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-tr from-[#166534] to-[#16A34A] text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2.5 mb-6 group">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-tr from-[#166534] to-[#16A34A] text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
                 <Recycle className="h-6 w-6 stroke-[2.2]" />
               </div>
               <div>
@@ -74,7 +85,8 @@ const LoginPage = () => {
               Welcome Back
             </h2>
             <p className="mt-1 text-sm text-slate-500">
-              Sign in to manage your cleanup requests and access civic waste services.
+              Sign in to manage your cleanup requests and access civic waste
+              services.
             </p>
           </div>
 
@@ -90,16 +102,14 @@ const LoginPage = () => {
               <button
                 type="button"
                 onClick={handleQuickCitizen}
-                className="flex items-center justify-center gap-1.5 rounded-xl border border-emerald-200 bg-white py-2 px-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors shadow-2xs"
-              >
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-emerald-200 bg-white py-2 px-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors shadow-2xs">
                 <User className="h-3.5 w-3.5 text-emerald-600" />
                 Citizen (Aarav)
               </button>
               <button
                 type="button"
                 onClick={handleQuickAdmin}
-                className="flex items-center justify-center gap-1.5 rounded-xl border border-emerald-200 bg-white py-2 px-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors shadow-2xs"
-              >
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-emerald-200 bg-white py-2 px-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors shadow-2xs">
                 <Shield className="h-3.5 w-3.5 text-emerald-600" />
                 Admin (Director)
               </button>
@@ -140,7 +150,13 @@ const LoginPage = () => {
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
                   Password
                 </label>
-                <a href="#forgot" onClick={(e) => { e.preventDefault(); alert('Password reset link sent to registered email.'); }} className="text-xs font-medium text-emerald-700 hover:text-emerald-800">
+                <a
+                  href="#forgot"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Password reset link sent to registered email.");
+                  }}
+                  className="text-xs font-medium text-emerald-700 hover:text-emerald-800">
                   Forgot Password?
                 </a>
               </div>
@@ -149,7 +165,7 @@ const LoginPage = () => {
                   <Lock className="h-4 w-4" />
                 </div>
                 <input
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -159,9 +175,12 @@ const LoginPage = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-600"
-                >
-                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-600">
+                  {showPassword ? (
+                    <EyeOff className="h-4 w-4" />
+                  ) : (
+                    <Eye className="h-4 w-4" />
+                  )}
                 </button>
               </div>
             </div>
@@ -176,7 +195,9 @@ const LoginPage = () => {
                 onChange={(e) => setRememberMe(e.target.checked)}
                 className="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
               />
-              <label htmlFor="remember-me" className="ml-2 block text-xs text-slate-600 cursor-pointer select-none">
+              <label
+                htmlFor="remember-me"
+                className="ml-2 block text-xs text-slate-600 cursor-pointer select-none">
                 Remember this device for 30 days
               </label>
             </div>
@@ -189,8 +210,7 @@ const LoginPage = () => {
               loading={loading}
               className="w-full shadow-md shadow-emerald-600/20"
               icon={ArrowRight}
-              iconPosition="right"
-            >
+              iconPosition="right">
               Sign In to Vacuum
             </Button>
           </form>
@@ -198,8 +218,10 @@ const LoginPage = () => {
           {/* Footer switch */}
           <div className="text-center pt-2 border-t border-slate-100">
             <p className="text-xs text-slate-500">
-              Don't have an account?{' '}
-              <Link to="/register" className="font-semibold text-emerald-700 hover:text-emerald-800">
+              Don't have an account?{" "}
+              <Link
+                to="/register"
+                className="font-semibold text-emerald-700 hover:text-emerald-800">
                 Create Account
               </Link>
             </p>
@@ -208,8 +230,8 @@ const LoginPage = () => {
       </div>
 
       {/* RIGHT SIDE - Animated Environmental Scene (Requirements 3 & 17) */}
-      <div className="hidden lg:block lg:w-1/2 min-h-[580px]">
-        <EnvironmentalScene />
+      <div className="h-90 w-full lg:h-auto lg:w-1/2 lg:min-h-145">
+        <EnvironmentalScene compact />
       </div>
     </div>
   );
